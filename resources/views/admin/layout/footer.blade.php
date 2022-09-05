@@ -35,6 +35,9 @@
   <script src="{{ url('admin/js/Chart.roundedBarCharts.js') }}"></script>
   <script src="{{ url('admin/js/custom.js') }}"></script>
 
+  {{-- confirm deletion --}}
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <!-- End custom js for this page-->
 
   

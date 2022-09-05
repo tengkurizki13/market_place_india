@@ -63,7 +63,23 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
          // Update Sections Status 
          Route::post('update-section-status',"SectionController@updateSectionStatus");
         
+         // Delete Sections
+        Route::get('delete-section/{id}',"SectionController@deleteSection");
 
+         // Add sections
+         Route::match(['get','post'],'add-edit-section/{id?}',"SectionController@addEditSection");
+
+         // Catagories
+        Route::get('catagories',"CatagoryController@catagories");
+
+        // Update Catagories Status 
+        Route::post('update-catagory-status',"CatagoryController@updateCatagoryStatus");
+
+          // Add Catagories
+          Route::match(['get','post'],'add-edit-catagory/{id?}',"CatagoryController@addEditCatagory");
+
+        // appedn Catagories level
+        Route::get('append-catagories-level',"CatagoryController@appendCatagoryLevel");
     });
 });
 
